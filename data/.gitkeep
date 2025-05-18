@@ -1,0 +1,2 @@
+# This file exists just to ensure the data directory gets created in git
+# The actual contents of this directory are gitignored
