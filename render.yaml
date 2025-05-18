@@ -1,0 +1,36 @@
+name: levanter-whatsapp-bot
+type: web
+env: node
+buildCommand: npm install --legacy-peer-deps && chmod +x render-setup.sh && ./render-setup.sh
+startCommand: node index.js
+envVars:
+  - key: VPS
+    value: true
+  - key: HEROKU
+    value: false
+  - key: KOYEB
+    value: false
+  - key: BOT_NAME
+    value: Levanter
+  - key: PREFIX
+    value: .
+  - key: SESSION_ID
+    value: levanter_175b09e5ef68f44cbb9a7dd5ac4b02e6fb
+  - key: MODE
+    value: private
+  - key: LANGUAGE
+    value: en
+  - key: DATABASE_URL
+    value: sqlite:./data/levanter.db
+  - key: AUTO_READ
+    value: false
+  - key: ALWAYS_ONLINE
+    value: false
+  - key: AUTO_REACTION
+    value: false
+  - key: READ_RECEIPT
+    value: false
+disk:
+  name: levanter-data
+  mountPath: /opt/render/project/src/data
+  sizeGB: 1
